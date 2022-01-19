@@ -1,0 +1,136 @@
+<html>
+   <head>
+     <title>Assignment1</title>
+     
+     
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     
+ 
+ <script>
+   var count=0;
+  $(document).ready(function(){
+  $(".increment").click(function(){
+     if(count<10)
+        count++;
+    if(count%2==0){ 
+      $("body").css("backgroundColor","lightblue");
+       $(".var").css("color","white");
+    }
+    else
+      {
+         $("body").css("backgroundColor","grey");
+         $(".var").css("color","red");
+        
+      }
+      $(".var").html( +count);
+  
+  });
+    $(".decrement").click(function(){
+     if(count>0)
+         count--;
+      if(count%2==0){ 
+      $("body").css("backgroundColor","lightblue");
+         $(".var").css("color","white");
+    }
+    else
+      {
+         $("body").css("backgroundColor","grey");
+        $(".var").css("color","red");
+        
+      }
+    $(".var").html( +count);
+  
+  });
+    $(".reset").click(function(){
+     
+ count=0;
+      if(count%2==0){ 
+      $("body").css("backgroundColor","lightblue");
+       $(".var").css("color","white");
+    }
+    else
+      {
+         $("body").css("backgroundColor","grey");
+         $(".var").css("color","red");
+        
+      }
+    $(".var").html( +count);
+  
+  });
+});
+</script>
+     
+     
+     
+     
+     
+     <style>
+       h1{
+         text-align:center;
+         font-size:50px;
+       }
+       h2{
+         text-align:center;
+         font-size:50px;
+         color:white;
+       }
+       body{
+         background-color:lightblue;
+       }
+       .decrement{
+        border-radius:4px;
+         background-color:red;
+         color:white;
+          height:50px;
+          width:50px;
+         
+       }
+        .reset{
+        border-radius:4px;
+         background-color:black;
+           position:center;
+          color:white;
+          text-align:center;
+          height:50px;
+          width:80px;
+       }
+        .increment{
+        border-radius:4px;
+         background-color:green;
+          position:center;
+          color:white;
+          height:50px;
+          width:50px;
+          
+       }
+       .button {
+  border: none;
+  color: white;
+         border-radius:16px;
+         font-siz:200px;
+  padding: 1px 3px;
+  text-align: center;
+  text-decoration: none;
+  text-align:center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+         position:relative;
+         margin: 50px ;
+}
+       </style>
+     </head>
+   
+   <body>
+     <h1>Counter</h1>
+     <h2 class=var>0</h2>
+     <center>
+   <button class="decrement">-</button>
+    
+    <button class="reset">Reset</button>
+   <button class="increment">+</button>
+       </center>
+     </body>
+   </html>
